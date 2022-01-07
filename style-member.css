@@ -1,0 +1,305 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration: none;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  line-height: 1em;
+  margin-left: .2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+/***************************** My Code *******************************/
+
+@font-face {
+	src: url('font/Poppins-Light.ttf');
+	font-family: poppins;
+}
+* {
+	text-decoration: none;
+  font-family: poppins;
+  font-size: 20px;
+  color: #3d3c41;
+}
+
+body {
+  background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+  width: 100%;
+}
+.addMember {
+  background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+  margin: 40px auto;
+  width: 95%;
+}
+.addMember h1{
+  font-weight: 600;
+  line-height: 40px;
+  font-size: 30px;
+  text-align: center;
+  padding: 20px 0;
+}
+form {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+label {
+  padding: 15px 15px;
+  text-align: left;
+}
+input, select {
+  border-radius: 5px;
+  border: 2px solid #ade6e9;
+  padding: 12px 12px;
+  font-size: 18px;
+  outline: none;
+  transition: border 300ms ease-in;
+}
+input:focus, select:focus {
+  border: 2px solid #FFE6FA;
+}
+
+.wrapper:last-child > label{
+  margin-bottom: 15px;
+}
+#add-button{
+  width: 150px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 2px solid #ade6e9;
+  align-self: center;
+  padding: 11px 15px;
+  outline: none;
+  position: relative;
+  z-index: 1;
+  transition: opacity 300ms ease-in-out;
+}
+#plus {
+  color: inherit;
+  transition: opacity 300ms ease-in-out;
+}
+#add-button::before {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  content: '';
+  position: absolute;
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  border: inherit;
+  background-image: linear-gradient(to right top, #accbee 0%, #ade6e9 100%);
+  /* background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); */
+  transition: opacity 300ms ease-in-out;
+}
+#add-button:hover::before {
+  opacity: 1;
+}
+#add-button:hover {
+  color: #fff;
+}
+#add-button:hover #plus {
+  color: #fff;
+}
+.members {
+  margin-top: 50px;
+}
+.underline {
+  width: 100%;
+  height: 2px;
+  background-color: #ade6e9;
+  margin-top: 20px;
+}
+table {
+  margin-top: 50px;
+  border: 1px solid #8FE7B7;
+  border-collapse: collapse;
+  overflow-x: auto;
+}
+th {
+  height: 50px;
+  background-color: #ade6e9;
+}
+td {
+  height: 30px;
+  padding-left: 10px;
+}
+tr:nth-child(even) > td {
+  background-color: #fff;
+}
+tr:nth-child(even) > td:last-child {
+  background-color: transparent;
+}
+td,th {
+  border: 1px solid #8f8383;
+  vertical-align: middle;
+  width: 30%;
+}
+tr > th:last-child {
+  width: 10%;
+  border-color: transparent;
+  background-color: transparent;
+}
+tr > td:last-child {
+  width: 10%;
+  border-color: transparent;
+  background-color: none;
+}
+td>button {
+  display: inline-block;
+  margin-right: 10px;
+  border-radius: 50%;
+  font-size: 17px;
+  text-align: center;
+  vertical-align: middle;
+  outline: none;
+  border: none;
+  transition: all 300ms ease-in-out;
+}
+td>button:nth-child(odd){
+  padding: 0 5px;
+  background-color: lightblue;
+}
+td>button:nth-child(even){
+  padding: 0 8px;
+  background-color: maroon;
+}
+i{
+  color: #fff;
+  transition: inherit;
+}
+td>button:hover {
+  background-color: #fff;
+}
+td>button:hover i {
+  color: #000;
+}
+
+@media only screen and (min-width: 1000px){
+  .addMember {
+    width: 90%;
+    margin-left:auto;
+    margin-right: auto;
+  }
+  .wrapper {
+    width: 220px;
+  }
+  table {
+    width: 100%;
+  }
+}

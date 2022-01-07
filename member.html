@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="description" content="This is a membership website for YTU SE-team" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="font/css/all.css" rel="stylesheet">
+<link href="font/css/fontawesome.css" rel="stylesheet">
+<link href="font/css/solid.css" rel="stylesheet">
+<link rel="stylesheet" href="style-member.css" />
+<title>YTU SE-team</title>
+</head>
+
+<body>
+  <div class="addMember">
+    <h1>YTU SE Team Membership</h1>
+
+    <form class="memberForm" onsubmit="event.preventDefault();" autocomplete="off" method="post">
+      <div class="wrapper">
+        <label>Username</label>
+        <input type="text" id="username">
+      </div>
+      
+      <div class="wrapper">
+        <label>Name</label>
+        <input type="text" id="name">
+      </div>
+      
+      <div class="wrapper">
+        <label>Team</label>
+        <select id="team" id="team">
+          <option value="FE">FE</option>
+          <option value="BE">BE</option>
+          <option value="DB">DB</option>
+          <option value="DK">DK</option>
+        </select>
+      </div>
+      
+      <div class="wrapper">
+        <label></label>
+        <button type="submit" id="add-button" onclick=getMember()>
+          <i id="plus" class="fas fa-plus"></i> &ThickSpace; &ThickSpace; Add
+        </button>
+        
+      </div>
+    </form>
+
+    <div class="members">
+      <h>List of Members</h>
+      <div class="underline"></div>
+      <table id="membersTable">
+        <tr>
+          <th>Username</th>
+          <th>Name</th>
+          <th>Team</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td>Htet</td>
+          <td>Htet Mon Oo</td>
+          <td>FE</td>
+          <td>
+            <button id="edit0" title="Edit" onclick="editMember(this)"><i class="fas fa-user-edit"></i></button>
+            <button id="delete0" title="Delete" onclick="deleteMember(this)"><i class="fas fa-trash-alt"></i></button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <script type="text/javascript" src="script-member.js"></script>
+</body>
+</html>

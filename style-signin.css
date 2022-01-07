@@ -1,0 +1,288 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration: none;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  line-height: 1em;
+  margin-left: .2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+
+/************************** My Code ********************************/
+
+@font-face {
+	src: url('font/Poppins-Light.ttf');
+	font-family: poppins;
+}
+* {
+	text-decoration: none;
+  font-family: poppins;
+  font-size: 20px;
+  color: #3d3c41;
+}
+
+body {
+  background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.signin {
+  padding-top: 30px;
+  width: 95%;
+}
+header {
+  height: 200px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url("img/login-photo.jpg");
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.5;
+}
+header h1 {
+    font-size: 50px;
+    color: turquoise;
+    text-align: center;
+    text-shadow: #000 3px 3px 8px;
+    text-transform: uppercase;
+}
+.label-wrapper {
+  display: none;
+}
+form>label {
+  font-size: 14px;
+  color: crimson;
+  padding: 0 20px;
+  margin: 0;
+  height: 15px;
+  text-align: left;
+  visibility: hidden;
+}
+.login {
+  margin-top: 20px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+}
+input {
+  font-size: 16px;
+  width: 95%;
+  outline: none;
+  padding: 10px 0 10px 10px;
+  margin: 0 15px 15px 15px;
+  border-radius: 5px;
+  border: 2px solid #ade6e9;
+  transition: all 300ms ease-in-out;
+  background-color: #fff;
+}
+input:focus {
+  border: 2px solid #FFE6FA;
+}
+input:focus::placeholder {
+  color: transparent;
+}
+.wrapper {
+  width: 95%;
+  margin: 20px 0 30px 0;
+}
+.wrapper div {
+  float: left;
+}
+.check {
+  width:auto;
+  margin:0 5px 0 0;
+}
+a {
+  float: right;
+  display: block;
+}
+button {
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 2px solid #ade6e9;
+  outline: none;
+  transition: all 400ms ease-in-out;
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
+}
+button:hover {
+  color: #fff !important;
+  text-shadow: rgb(202, 187, 165) 3px 3px 5px;
+  background-color: #ade6e9;
+}
+
+
+@media only screen and (min-width: 1000px) {
+  body {
+    align-items: center;
+    height: 100vh;
+  }
+  .signin {
+    padding-top: 0;
+    width: 60%;
+    height: 85%;
+    border-radius: 20px;
+    background-color: #fff;;
+  }
+  header {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-size: 100%;
+    background-position-y: 80%;
+    height: 250px;
+  }
+  .container {
+    width: 100%;
+    display:flex;
+    flex-flow: row wrap;
+  }
+  .label-wrapper {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-basis: 30%;
+    margin-top: 27px;
+  }
+  label {
+    padding: 10px 10px 10px 0;
+    margin: 15px 15px;
+  }
+  input {
+    width: 90%;
+    border-color: transparent;
+    border-bottom: 2px solid #ade6e9;
+  }
+  input:focus {
+    border-color: transparent;
+    border-bottom: 2px solid #FFE6FA;
+  }
+  input::placeholder {
+    color: transparent;
+  }
+  .login {
+    flex-basis: 60%;
+    align-items: flex-end;
+    
+  }
+
+}
+
